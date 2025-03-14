@@ -1,22 +1,21 @@
 import sys 
 n,m = map(int, sys.stdin.readline().split())
 
-security = []
-for _ in range (n):
-    security.append(sys.stdin.readline().strip())
+castle = []
 
-cnt = 0 
-  
-for i in security:
-    if 'X' not in i:
-        cnt += 1
-    else:
-        vertical = []
-        for j in i:
-            vertical.append(security[i][j])
-        if 
+for _ in range(n):
+    castle.append(sys.stdin.readline().strip())
+
+row_count, col_count = 0, 0
+
+for i in range(n):
+    if 'X' not in castle[i]:
+        row_count += 1
 
 
-        cnt += 1
+for j in range(m):
+    for i in range(n):
+        if 'X' not in castle[i][j]:
+            col_count += 1
 
-print(cnt)
+print(max(row_count, col_count))
