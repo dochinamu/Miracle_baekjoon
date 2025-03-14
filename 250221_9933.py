@@ -9,9 +9,9 @@ def reverse_name(name):
 
 # 단어 개수 입력
 n = int(sys.stdin.readline().strip())
-words = []
 
 # 단어 리스트 입력
+words = []
 for _ in range(n):
     words.append(sys.stdin.readline().strip())
 

@@ -7,7 +7,7 @@ def hash_func(str):
     sum = 0
     for i in range(len(str)):
         sum+=cha_to_int(str[i])*(pow(31, i))
-        print(cha_to_int(str[i])*(pow(31, i)))
+        # print(cha_to_int(str[i])*(pow(31, i)))
     return sum % 1234567891
 
 

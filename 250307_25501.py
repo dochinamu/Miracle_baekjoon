@@ -1,27 +1,18 @@
 import sys
 
-def recursion(s, l, r):
+def recursion(s, l, r, cnt):
     if l >= r:
-        if len(s)//2+1 > l:
-            times = l
-        else:
-            times = len(s)//2 +1
-        return 1, times
+        return 1, cnt+1
     elif s[l] != s[r]:
-        return 0
+        return 0, cnt+1
     else:
-        return recursion(s, l+1, r-1)
-    
-def isPalindrome(s):
-    return recursion(s, 0, len(s)-1)
+        return recursion(s, l + 1, r - 1, cnt+1)
 
-t = int(sys.stdin.readline())
+def is_palindrome(s):
+    return recursion(s, 0, len(s) - 1, 0)
 
-slist = []
-for i in range(t):
-    slist.append(sys.stdin.readline().strip())
-
-    flag = isPalindrome(slist[i])[0]
-    times = isPalindrome(slist[i])[1]
-    print(flag, times)
-
+T = int(sys.stdin.readline().strip())
+for _ in range(T):
+    i = sys.stdin.readline().strip()
+    anw, count = is_palindrome(i)
+    print(anw, count)

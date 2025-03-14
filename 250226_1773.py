@@ -24,7 +24,6 @@ print(len(set(fw)))
 
 # *** 방법 2
 # [0, 0, 0, ..., 0]
-import sys
 
 t = [0] * (c + 1)
 
