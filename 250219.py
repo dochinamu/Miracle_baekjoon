@@ -30,6 +30,7 @@ def cut(x,y):
 for i in range(n-7):
     for j in range(m-7):
         # 적당한 정도의 큰 수와 계속 업데이트되는 값을 min 함수에 넣어, 최소값을 추출하는 방법
+        # 대신 초기화를 꼭 해줘야 한다
         res = min(res, cut(i, j))
 
 print(res)
